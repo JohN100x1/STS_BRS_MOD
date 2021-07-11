@@ -1,0 +1,11 @@
+{
+  "blackrockshooter:Skulls_orb": {
+    "NAME": "Skull",
+    "DESCRIPTION": [
+      "#yPassive: At the end of turn, apply #b",
+      " #yPoison to ALL enemies. NL #yEvoke: Apply #b",
+      " #yPoison to ALL enemies.",
+      " #yPoison to ALL enemies. NL #yEvoke: Apply Poison equal to the enemy's current amount."
+    ]
+  }
+}

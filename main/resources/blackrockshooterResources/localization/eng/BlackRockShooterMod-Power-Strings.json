@@ -1,0 +1,73 @@
+{
+        "blackrockshooter:Psychotic_Power_pw": {
+                "NAME": "Psychotic Power",
+                "DESCRIPTIONS": ["Whenever a card is #yExhausted, draw #b", " card,", " cards,", " gain #b"," energy, and lose #b", " HP."]
+        },
+        "blackrockshooter:Demonic_Power_pw": {
+                "NAME": "Demonic Power",
+                "DESCRIPTIONS": ["Whenever you play an attack, gain #b", " #yStrength."]
+        },
+        "blackrockshooter:Necrotic_Power_pw": {
+                "NAME": "Necrotic Power",
+                "DESCRIPTIONS": ["Whenever you play a card, apply #b", " #yPoison to ALL enemies."]
+        },
+        "blackrockshooter:Unrelenting_Fury_pw": {
+                "NAME": "Unrelenting Fury",
+                "DESCRIPTIONS": ["Whenever you play an attack this turn, gain #b"," Temporary #yStrength."]
+        },
+        "blackrockshooter:Attack_Trail_pw": {
+                "NAME": "Attack Trail",
+                "DESCRIPTIONS": ["Whenever you play an attack this turn, gain #b"," Block."]
+        },
+        "blackrockshooter:Blue_Aura_pw": {
+                "NAME": "Blue Aura",
+                "DESCRIPTIONS": ["Whenever you are attacked, deal #b"," damage back and gain #b"," #yStrength."]
+        },
+        "blackrockshooter:Sanctuary_pw": {
+                "NAME": "Sanctuary",
+                "DESCRIPTIONS": ["Every 3 times you gain #yBlock, gain #b1 #yDexterity."]
+        },
+        "blackrockshooter:Deadly_Decree_pw": {
+                "NAME": "Deadly Decree",
+                "DESCRIPTIONS": ["Evoking #ySkulls Apply #yPoison equal to the enemy's current amount instead."]
+        },
+        "blackrockshooter:Outrage_pw": {
+                "NAME": "Outrage",
+                "DESCRIPTIONS": ["At the end of #b", " turn", " turns", ", exit your #yStance and become #yConfused.", "@RRAAWWRR!!!@", "@NANI???@"]
+        },
+        "blackrockshooter:Sleep_pw": {
+                "NAME": "Sleep",
+                "DESCRIPTIONS": ["At the start of turn, end your turn and reduce #ySleep by #b1. NL Whenever you are attacked, reduce #ySleep by #b1.","~ZzZzZ...~","!!!"]
+        },
+        "blackrockshooter:Bleed_pw": {
+                "NAME": "Bleed",
+                "DESCRIPTIONS": [
+                        "At the start of your turn or when you take unblocked damage, increase #yBleed by #b",
+                        "At the start of its turn or when it takes unblocked damage, increase #yBleed by #b",
+                        ". NL When you obtain #b",
+                        ". NL When it obtains #b",
+                        " or more #yBleed, you lose 33% of max HP and remove Bleed.",
+                        " or more #yBleed, it loses 33% of max HP and remove Bleed."
+                ]
+        },
+        "blackrockshooter:Rock_Cannon_Mk2_pw": {
+                "NAME": "Rock Cannon Mk.2",
+                "DESCRIPTIONS": ["#yAuto #yAttack attacks #b", " more time.", " more times."]
+        },
+        "blackrockshooter:Auto_Reloader_pw": {
+                "NAME": "Auto Reloader",
+                "DESCRIPTIONS": ["At the start of your turn, add #b", " #yAuto #yAttack attack to your hand.", " #yAuto #yAttack attacks to your hand."]
+        },
+        "blackrockshooter:Withstand_pw": {
+                "NAME": "Withstand",
+                "DESCRIPTIONS": ["Whenever a card is #yExhausted, gain #b", " Block."]
+        },
+        "blackrockshooter:Keep_Firing_pw": {
+                "NAME": "Keep Firing",
+                "DESCRIPTIONS": ["Whenever a card is #yExhausted this turn, #yKeep #yFiring returns from the discard pile to your hand."]
+        },
+        "blackrockshooter:Endure_no_Pain_pw": {
+                "NAME": "Endure no Pain",
+                "DESCRIPTIONS": ["Whenever a card is Exhausted, gain #b", " Block."]
+        }
+}

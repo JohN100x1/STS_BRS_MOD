@@ -1,0 +1,58 @@
+{
+  "blackrockshooter:Blue_Flame": {
+    "NAME": "Blue Flame",
+    "FLAVOR": "Emanates with power.",
+    "DESCRIPTIONS": [
+      "The first time you #yexhaust a card each combat, gain [E] ."
+    ]
+  },
+  "blackrockshooter:Purple_Flame": {
+    "NAME": "Purple Flame",
+    "FLAVOR": "Emanates with psychotic power.",
+    "DESCRIPTIONS": [
+      "Replaces #bBlue #bFlame. The first time you #yexhaust a card each turn, gain [E] ."
+    ]
+  },
+  "blackrockshooter:Red_Flame": {
+    "NAME": "Red Flame",
+    "FLAVOR": "Emanates with demonic power.",
+    "DESCRIPTIONS": [
+      "Replaces #bBlue #bFlame. The first time you #yexhaust a card each turn, gain 1 #yStrength."
+    ]
+  },
+  "blackrockshooter:Green_Flame": {
+    "NAME": "Green Flame",
+    "FLAVOR": "Emanates with necrotic power.",
+    "DESCRIPTIONS": [
+      "Replaces #bBlue #bFlame. The first time you #yexhaust a card each turn, #ychannel 1 #ySkulls."
+    ]
+  },
+  "blackrockshooter:Bloody_Water": {
+    "NAME": "Bloody Water",
+    "FLAVOR": "Collected from a bloody battlefield.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply #b1 #yBleed to a random enemy."
+    ]
+  },
+  "blackrockshooter:Green_Skull": {
+    "NAME": "Green Skull",
+    "FLAVOR": "An Ominous looking Skull radiating with death.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, #ychannel #b1 #ySkulls."
+    ]
+  },
+  "blackrockshooter:Rock_Cannon": {
+    "NAME": "Rock Cannon",
+    "FLAVOR": "A powerful cannon used by Black Rock Shooter.",
+    "DESCRIPTIONS": [
+      "Your #yAuto #yAttacks have #yRetain."
+    ]
+  },
+  "blackrockshooter:King_Saw": {
+    "NAME": "King Saw",
+    "FLAVOR": "A powerful sword used by Black Gold Saw.",
+    "DESCRIPTIONS": [
+      "All #yBleed increase by b#2 instead of b#1."
+    ]
+  }
+}

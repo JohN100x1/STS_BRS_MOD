@@ -1,0 +1,37 @@
+[
+  {
+    "NAMES": [
+      "Sleep",
+      "sleep"
+    ],
+    "DESCRIPTION": "At the start of turn, end your turn and reduce #ySleep by #b1. NL Whenever you are attacked, reduce #ySleep by #b1."
+  },
+  {
+    "NAMES": [
+      "Bleed",
+      "bleed"
+    ],
+    "DESCRIPTION": "At the start of its turn or when it takes unblocked damage, increase #yBleed by #b1. When it obtains #b10 #yBleed, it loses 33% of max HP and remove #yBleed."
+  },
+  {
+    "NAMES": [
+      "Stunned",
+      "stunned"
+    ],
+    "DESCRIPTION": "Does nothing during its turn."
+  },
+  {
+    "NAMES": [
+      "Slow",
+      "slow"
+    ],
+    "DESCRIPTION": "The enemy receives 10% more damage for each card played this turn."
+  },
+  {
+    "NAMES": [
+      "Skulls",
+      "skulls"
+    ],
+    "DESCRIPTION": "Orb: Apply Poison to ALL enemies at the end of your turn and when evoked."
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "blackrockshooter:Blood_Elixir": {
+    "NAME": "Blood Elixir",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yBleed."
+    ]
+  },
+  "blackrockshooter:Reload_Potion": {
+    "NAME": "Reload Potion",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " upgraded #yAuto #yAttacks to your hand."
+    ]
+  }
+}

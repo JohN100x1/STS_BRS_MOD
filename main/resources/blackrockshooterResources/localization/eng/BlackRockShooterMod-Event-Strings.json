@@ -1,0 +1,27 @@
+{
+  "blackrockshooter:DeadMasterEvent": {
+    "NAME": "The Dead Master",
+    "DESCRIPTIONS": [
+      "You come across #g~The~ #g~Dead~ #g~Master~ sitting upon her throne. NL She looks at you intently and asks #g~Join~ #g~us~",
+      "You kneel and shout #b@\"Yes,@ #b@My@ #b@Queen!\"@ . She rewards your fealty and says... #g~Welcome~ .",
+      "You choose to defy her and #r@FIGHT@ . As you plunge your sword into her, she utters a final word... #g@Why?@",
+      "You offer her #yGold instead. She accepts your offer... #g~Hmmm~ .",
+      "You quickly run away..."
+    ],
+    "OPTIONS": [
+      "[Obey] #gReplace #gall #gStrikes #gwith Annoying Skulls. #rLose #r",
+      " #rMax #rHP.",
+      "[Defy] #gGain #g",
+      " #gGold. #rTake #r",
+      " #rDamage.",
+      "[Offer] #gRemove #g",
+      " #gcards #gfrom #gyour #gdeck. #rLose #r",
+      " #rGold.",
+      "[Locked] Requires ",
+      " Gold.",
+      "[Leave]",
+      "Select ",
+      " cards to remove."
+    ]
+  }
+}
