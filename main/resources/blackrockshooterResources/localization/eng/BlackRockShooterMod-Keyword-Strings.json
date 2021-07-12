@@ -33,5 +33,19 @@
       "skulls"
     ],
     "DESCRIPTION": "Orb: Apply Poison to ALL enemies at the end of your turn and when evoked."
+  },
+  {
+    "NAMES": [
+      "Aggressor",
+      "aggressor"
+    ],
+    "DESCRIPTION": "Upon entering this #yStance, draw 1 card. In this stance, attacks deal 3 additional damage."
+  },
+  {
+    "NAMES": [
+      "Defender",
+      "defender"
+    ],
+    "DESCRIPTION": "Upon exiting this #yStance, gain 1 [E] . Receive 3 less damage from attacks."
   }
 ]

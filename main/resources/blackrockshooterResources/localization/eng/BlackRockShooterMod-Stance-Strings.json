@@ -1,0 +1,14 @@
+{
+  "blackrockshooter:Aggressor": {
+    "NAME": "Aggressor",
+    "DESCRIPTIONS": [
+      "Upon entering this #yStance, draw 1 card. Attacks deal 3 additional damage."
+    ]
+  },
+  "blackrockshooter:Defender": {
+    "NAME": "Defender",
+    "DESCRIPTIONS": [
+      "Upon exiting this #yStance, gain 1 [E] . Receive 3 less damage from attacks."
+    ]
+  }
+}

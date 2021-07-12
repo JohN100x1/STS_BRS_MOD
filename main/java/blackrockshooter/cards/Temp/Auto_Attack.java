@@ -22,11 +22,6 @@ public class Auto_Attack extends AbstractDynamicCard {
     public static final String ID = BlackRockShooterMod.makeID(Auto_Attack.class.getSimpleName());
     public static final String IMG = makeCardPath("Auto_Attack.png");
 
-    // /TEXT DECLARATION/
-
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    private static final CardStrings cardStrings2 = CardCrawlGame.languagePack.getCardStrings(ID);
-
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
@@ -59,19 +54,6 @@ public class Auto_Attack extends AbstractDynamicCard {
         for (int i = 0; i < magicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
-    }
-
-    @Override
-    public void applyPowers(){
-        super.applyPowers();
-        if (AbstractDungeon.player.hasRelic(Rock_Cannon.ID)){
-            selfRetain = true;
-            rawDescription = cardStrings2.EXTENDED_DESCRIPTION[0];
-        } else {
-            selfRetain = false;
-            rawDescription = cardStrings.DESCRIPTION;
-        }
-        initializeDescription();
     }
 
 

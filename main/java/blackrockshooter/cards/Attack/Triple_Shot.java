@@ -7,6 +7,7 @@ import blackrockshooter.powers.Bleed_pw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +17,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Triple_Shot extends AbstractDynamicCard {
 
-    // Deal 2(3) Damage 3 times.
+    // Deal 3(4) Damage 3 times. Exhaust 1 card.
 
     public static final String ID = BlackRockShooterMod.makeID(Triple_Shot.class.getSimpleName());
     public static final String IMG = makeCardPath("Triple_Shot.png");
@@ -29,7 +30,7 @@ public class Triple_Shot extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/
@@ -45,6 +46,7 @@ public class Triple_Shot extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < 3; i++) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new ExhaustAction(1, false));
         }
     }
 

@@ -358,6 +358,10 @@ public class BlackRockShooterMod implements
         // Event Strings
         BaseMod.loadCustomStringsFile(EventStrings.class,
                 getModID() + "Resources/localization/eng/BlackRockShooterMod-Event-Strings.json");
+
+        // Event Strings
+        BaseMod.loadCustomStringsFile(StanceStrings.class,
+                getModID() + "Resources/localization/eng/BlackRockShooterMod-Stance-Strings.json");
         
         logger.info("Done editing strings");
     }

@@ -45,7 +45,8 @@
     "NAME": "Rock Cannon",
     "FLAVOR": "A powerful cannon used by Black Rock Shooter.",
     "DESCRIPTIONS": [
-      "Your #yAuto #yAttacks have #yRetain."
+      "Whenever you play #b",
+      " attacks, add an #yAuto #yAttack to your hand."
     ]
   },
   "blackrockshooter:King_Saw": {

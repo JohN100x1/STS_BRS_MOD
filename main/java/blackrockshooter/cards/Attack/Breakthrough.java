@@ -3,9 +3,11 @@ package blackrockshooter.cards.Attack;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
+import blackrockshooter.stances.Aggressor;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +19,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Breakthrough extends AbstractDynamicCard {
 
-    // Deal 7(9) Damage. Gain 2(3) Strength. At the end of this turn, lose 2(3) Strength.
+    // Deal 4(7) Damage. Enter Aggressor.
 
     public static final String ID = BlackRockShooterMod.makeID(Breakthrough.class.getSimpleName());
     public static final String IMG = makeCardPath("Breakthrough.png");
@@ -30,10 +32,8 @@ public class Breakthrough extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int MAGIC = 2;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
 
@@ -41,15 +41,13 @@ public class Breakthrough extends AbstractDynamicCard {
     public Breakthrough() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = MAGIC;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, magicNumber), magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Aggressor()));
     }
 
     // Upgraded stats.
@@ -58,7 +56,6 @@ public class Breakthrough extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }

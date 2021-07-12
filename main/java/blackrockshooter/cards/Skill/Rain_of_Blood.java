@@ -32,7 +32,7 @@ public class Rain_of_Blood extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int MAGIC = 4;
     private static final int UPGRADE_PLUS_MAGIC = 2;
 

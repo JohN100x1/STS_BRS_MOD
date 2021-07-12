@@ -1,8 +1,10 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.stances.Defender;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,7 +19,7 @@ public class See_through extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 6(8) Block. Gain 2(3) Dexterity. At the end of this turn, lose 2(3) Dexterity.
+     * Gain 6(8) Block. Gain 2(3) Dexterity. Enter Calm.
      */
 
     // TEXT DECLARATION 
@@ -53,8 +55,7 @@ public class See_through extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, magicNumber), magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseDexterityPower(AbstractDungeon.player, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Defender()));
     }
 
     // Upgraded stats.

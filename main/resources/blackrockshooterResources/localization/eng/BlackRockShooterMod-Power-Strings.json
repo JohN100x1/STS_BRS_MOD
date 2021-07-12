@@ -19,6 +19,10 @@
                 "NAME": "Attack Trail",
                 "DESCRIPTIONS": ["Whenever you play an attack this turn, gain #b"," Block."]
         },
+        "blackrockshooter:Blazing_Trail_pw": {
+                "NAME": "Blazing Trail",
+                "DESCRIPTIONS": ["Whenever you play an attack this turn, draw #b"," card.", " cards."]
+        },
         "blackrockshooter:Blue_Aura_pw": {
                 "NAME": "Blue Aura",
                 "DESCRIPTIONS": ["Whenever you are attacked, deal #b"," damage back and gain #b"," #yStrength."]

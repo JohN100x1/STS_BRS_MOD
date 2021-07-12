@@ -16,7 +16,7 @@ public class Blue_Aura extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Whenever you are attacked, deals 2(3) damage back and gain 1 strength.
+     * Whenever you are attacked, deals 2(4) damage back and gain 1 strength.
      */
 
 
@@ -37,7 +37,7 @@ public class Blue_Aura extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int UPGRADE_PLUS_MAGIC = 2;
 
     // Hey want a second magic/damage/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable

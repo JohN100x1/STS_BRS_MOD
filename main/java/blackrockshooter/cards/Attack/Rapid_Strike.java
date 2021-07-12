@@ -3,9 +3,11 @@ package blackrockshooter.cards.Attack;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
+import blackrockshooter.stances.Aggressor;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,10 +20,15 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Rapid_Strike extends AbstractDynamicCard {
 
-    // Deal 1(2) Damage 5 times. Damage is not affected by Strength.
+    // Deal 2 Damage 5 times. Damage is not affected by Strength. (Enter Wraith.)
 
     public static final String ID = BlackRockShooterMod.makeID(Rapid_Strike.class.getSimpleName());
     public static final String IMG = makeCardPath("Rapid_Strike.png");
+
+    // /TEXT DECLARATION/
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // STAT DECLARATION
 
@@ -31,8 +38,7 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
@@ -52,6 +58,9 @@ public class Rapid_Strike extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        if(upgraded){
+            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Aggressor()));
+        }
     }
 
 
@@ -60,7 +69,7 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

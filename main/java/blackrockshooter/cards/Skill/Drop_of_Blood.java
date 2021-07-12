@@ -16,7 +16,7 @@ public class Drop_of_Blood extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Apply 2(3) Bleed.
+     * Apply 2 Bleed.
      */
 
 
@@ -33,8 +33,8 @@ public class Drop_of_Blood extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final int MAGIC = 2;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
 
 
     // /STAT DECLARATION/
@@ -56,7 +56,7 @@ public class Drop_of_Blood extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

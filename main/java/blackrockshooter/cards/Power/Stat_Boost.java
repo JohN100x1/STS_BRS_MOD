@@ -15,19 +15,19 @@ import blackrockshooter.characters.BlackRockShooter;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Aggressor extends AbstractDynamicCard {
+public class Stat_Boost extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 1 Strength. Gain 1 Dexterity. Gain 1 Focus.
+     * Gain 1 Strength. Gain 1 Dexterity. (Gain 1 Focus.)
      */
 
 
     // TEXT DECLARATION
 
-    public static final String ID = BlackRockShooterMod.makeID(Aggressor.class.getSimpleName());
-    public static final String IMG = makeCardPath("Aggressor.png");
+    public static final String ID = BlackRockShooterMod.makeID(Stat_Boost.class.getSimpleName());
+    public static final String IMG = makeCardPath("Stat_Boost.png");
 
     // /TEXT DECLARATION/
 
@@ -48,7 +48,7 @@ public class Aggressor extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public Aggressor() {
+    public Stat_Boost() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
     }

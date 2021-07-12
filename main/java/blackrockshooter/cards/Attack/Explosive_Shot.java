@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-// Deal 12(15) damage. Exhaust 1 card.
+// Deal 13(17) damage. Exhaust 1 card.
 
 public class Explosive_Shot extends AbstractDynamicCard {
 
@@ -28,8 +28,8 @@ public class Explosive_Shot extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 13;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 

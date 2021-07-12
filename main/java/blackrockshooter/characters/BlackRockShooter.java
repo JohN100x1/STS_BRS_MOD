@@ -6,6 +6,8 @@ import blackrockshooter.cards.Power.*;
 import blackrockshooter.cards.Skill.*;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import blackrockshooter.stances.Aggressor;
+import blackrockshooter.stances.Defender;
 import blackrockshooter.ui.BRSEnergyOrb;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -121,29 +123,29 @@ public class BlackRockShooter extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         // Basic
-        retVal.add(Strike_Black.ID);     // atk
-        retVal.add(Strike_Black.ID);     // atk
-        retVal.add(Strike_Black.ID);     // atk
+        //retVal.add(Strike_Black.ID);     // atk
+        //retVal.add(Strike_Black.ID);     // atk
+        //retVal.add(Strike_Black.ID);     // atk
         retVal.add(Strike_Black.ID);     // atk
         retVal.add(Defend_Black.ID);     // def
-        retVal.add(Defend_Black.ID);     // def
-        retVal.add(Defend_Black.ID);     // def
-        retVal.add(Defend_Black.ID);     // def
-        retVal.add(Vulcannon.ID);        // atk
-        retVal.add(Charge_Shot.ID);      // atk (bonus dmg)
+        //retVal.add(Defend_Black.ID);     // def
+        //retVal.add(Defend_Black.ID);     // def
+        //retVal.add(Defend_Black.ID);     // def
+        //retVal.add(Vulcannon.ID);        // atk
+        //retVal.add(Charge_Shot.ID);      // atk (bonus dmg)
 
         // Common
-        //retVal.add(Triple_Shot.ID);      // atk ################################## change pic
+        //retVal.add(Triple_Shot.ID);      // atk
         //retVal.add(Rapid_Strike.ID);     // atk
         //retVal.add(Fade_Away.ID);        // def
         //retVal.add(Drop_of_Blood.ID);    // bleed
         //retVal.add(Run_Away.ID);         // draw + exhaust
-        //retVal.add(Breakthrough.ID);     // atk + str
+        retVal.add(Breakthrough.ID);     // atk + str
         //retVal.add(Backstep.ID);         // atk + def
         //retVal.add(Sidestep.ID);         // def
         //retVal.add(Rapid_Cannon.ID);     // atk + draw
         //retVal.add(Volcain_Cannon.ID);   // atk
-        //retVal.add(See_through.ID);      // def + dex
+        retVal.add(See_through.ID);      // def + dex
         //retVal.add(Crouch.ID);           // def + draw
         //retVal.add(Jump_Shot.ID);        // atk + def + draw
         //retVal.add(Pierce.ID);           // atk + vuln.
@@ -155,7 +157,7 @@ public class BlackRockShooter extends CustomPlayer {
 
         // Uncommon
         //retVal.add(Dark_Beam.ID);        // bleed
-        //retVal.add(Dark_Comet.ID);       // bleed (AOE)
+        //retVal.add(Blazing_Trail.ID);    // bleed (AOE)
         //retVal.add(Rain_of_Blood.ID);    // bleed
         //retVal.add(Iksa_Blade.ID);       // atk + bleed
         //retVal.add(Toxic_Strike.ID);     // atk + poison
@@ -181,7 +183,7 @@ public class BlackRockShooter extends CustomPlayer {
         //retVal.add(Unrelenting_Fury.ID); // str
         //retVal.add(Sanctuary.ID);        // dex
         //retVal.add(Blue_Aura.ID);        // str + thorns
-        //retVal.add(Aggressor.ID);        // str + dex
+        //retVal.add(Stat_Boost.ID);       // str + dex
         //retVal.add(Rock_Cannon_Mk2.ID);  // atk buff
         //retVal.add(Rehabilitate.ID);     // card manipulation
         //retVal.add(Tactical_Manoeuvre.ID); // card manipulation
@@ -211,9 +213,9 @@ public class BlackRockShooter extends CustomPlayer {
 
         // TODO: Make card scale from cards played this combat
         // TODO: Add a signature power for Black Rock Shooter
-        // TODO: Change dark comet to something else
-        // TODO: Change dark blade to something else
-        // TODO: change effect of rock cannon relic
+        // TODO: Change leathal blast to something else
+        // TODO: Reowrk Re-Igition
+        // TODO: change triple shot pic
         return retVal;
     }
 
