@@ -19,7 +19,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Breakthrough extends AbstractDynamicCard {
 
-    // Deal 4(7) Damage. Enter Aggressor.
+    // Deal 7(9) Damage. Enter Aggressor.
 
     public static final String ID = BlackRockShooterMod.makeID(Breakthrough.class.getSimpleName());
     public static final String IMG = makeCardPath("Breakthrough.png");
@@ -32,8 +32,8 @@ public class Breakthrough extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 

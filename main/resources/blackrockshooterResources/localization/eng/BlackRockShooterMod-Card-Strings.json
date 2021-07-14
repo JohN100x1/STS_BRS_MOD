@@ -115,7 +115,7 @@
   },
   "blackrockshooter:Outspeed": {
     "NAME": "Outspeed",
-    "DESCRIPTION": "Gain !B! Block. NL Apply blackrockshooter:Slow. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply 1 blackrockshooter:Slow. NL Exhaust."
   },
   "blackrockshooter:Unreal_Motion": {
     "NAME": "Unreal Motion",
@@ -226,7 +226,7 @@
   },
   "blackrockshooter:See_through": {
     "NAME": "See through",
-    "DESCRIPTION": "Gain !B! Block. NL Enter blackrockshooter:Defender."
+    "DESCRIPTION": "Gain !B! Block. NL Enter blackrockshooter:Aggressor."
   },
   "blackrockshooter:Sanctuary": {
     "NAME": "Sanctuary",
@@ -307,12 +307,12 @@
   "blackrockshooter:Rapid_Strike": {
     "NAME": "Rapid Strike",
     "DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by Strength.",
-    "UPGRADE_DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by Strength. NL Enter blackrockshooter:Aggressor."
+    "UPGRADE_DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by other effects."
   },
   "blackrockshooter:Fade_Away": {
     "NAME": "Fade Away",
     "DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by Dexterity. NL Enter blackrockshooter:Defender."
+    "UPGRADE_DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by other effects."
   },
   "blackrockshooter:Dark_Beam": {
     "NAME": "Dark Beam",

@@ -295,7 +295,7 @@ public class BlackRockShooterMod implements
         logger.info("Add variables");
         BaseMod.addDynamicVariable(new CounterNumber());
         logger.info("Adding cards");
-        new AutoAdd("BlackRockShooter").packageFilter("blackrockshooter.cards").setDefaultSeen(false).cards();
+        new AutoAdd("BlackRockShooter").packageFilter("blackrockshooter.cards").setDefaultSeen(true).cards();
         logger.info("Done adding cards!");
     }
 
@@ -359,7 +359,7 @@ public class BlackRockShooterMod implements
         BaseMod.loadCustomStringsFile(EventStrings.class,
                 getModID() + "Resources/localization/eng/BlackRockShooterMod-Event-Strings.json");
 
-        // Event Strings
+        // Stance Strings
         BaseMod.loadCustomStringsFile(StanceStrings.class,
                 getModID() + "Resources/localization/eng/BlackRockShooterMod-Stance-Strings.json");
         

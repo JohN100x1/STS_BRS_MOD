@@ -1,14 +1,8 @@
 {
   "blackrockshooter:Aggressor": {
     "NAME": "Aggressor",
-    "DESCRIPTIONS": [
-      "Upon entering this #yStance, draw 1 card. Attacks deal 3 additional damage."
-    ]
-  },
-  "blackrockshooter:Defender": {
-    "NAME": "Defender",
-    "DESCRIPTIONS": [
-      "Upon exiting this #yStance, gain 1 [E] . Receive 3 less damage from attacks."
+    "DESCRIPTION": [
+      "Your Attacks deal 20% more damage and you take 20% less damage from attacks. NL Exit this #yStance at the start of your next turn."
     ]
   }
 }

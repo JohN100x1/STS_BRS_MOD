@@ -15,7 +15,7 @@ public class Sidestep extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 4(6) block 2 times.
+     * Gain 4(5) block 2 times.
      */
 
 
@@ -34,7 +34,7 @@ public class Sidestep extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
     private static final int AMOUNT = 2;
 
 

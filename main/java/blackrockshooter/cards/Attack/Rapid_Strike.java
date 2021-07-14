@@ -16,19 +16,16 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
+import java.util.ArrayList;
+
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Rapid_Strike extends AbstractDynamicCard {
 
-    // Deal 2 Damage 5 times. Damage is not affected by Strength. (Enter Wraith.)
+    // Deal 2 Damage 4(5) times. Damage is not affected by other effects.
 
     public static final String ID = BlackRockShooterMod.makeID(Rapid_Strike.class.getSimpleName());
     public static final String IMG = makeCardPath("Rapid_Strike.png");
-
-    // /TEXT DECLARATION/
-
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // STAT DECLARATION
 
@@ -38,7 +35,9 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 5;
+    private static final int AMOUNT = 4;
+    private static final int UPGRADE_PLUS_AMOUNT = 1;
 
     // /STAT DECLARATION/
 
@@ -46,6 +45,7 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public Rapid_Strike() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
+        baseCounterNumber = counterNumber = AMOUNT;
 
         this.tags.add(CardTags.STRIKE);
     }
@@ -57,9 +57,8 @@ public class Rapid_Strike extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        if(upgraded){
-            AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Aggressor()));
+        if(upgradedCounterNumber){
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,magicNumber,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
     }
 
@@ -69,7 +68,7 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeCounterNumber(UPGRADE_PLUS_AMOUNT);
             initializeDescription();
         }
     }

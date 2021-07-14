@@ -33,14 +33,16 @@ public class Blazing_Trail extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int MAGIC = 4;
-    private static final int UPGRADE_PLUS_MAGIC = 3;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int MAGIC = 1;
 
     // /STAT DECLARATION/
 
 
     public Blazing_Trail() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
     }
 
@@ -59,7 +61,7 @@ public class Blazing_Trail extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

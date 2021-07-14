@@ -39,13 +39,6 @@
       "Aggressor",
       "aggressor"
     ],
-    "DESCRIPTION": "Upon entering this #yStance, draw 1 card. In this stance, attacks deal 3 additional damage."
-  },
-  {
-    "NAMES": [
-      "Defender",
-      "defender"
-    ],
-    "DESCRIPTION": "Upon exiting this #yStance, gain 1 [E] . Receive 3 less damage from attacks."
+    "DESCRIPTION": "Your Attacks deal 20% more damage and you take 20% less damage from attacks. NL Exit this #yStance at the start of your next turn."
   }
 ]

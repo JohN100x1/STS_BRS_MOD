@@ -2,12 +2,9 @@ package blackrockshooter.characters;
 
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.Attack.*;
-import blackrockshooter.cards.Power.*;
 import blackrockshooter.cards.Skill.*;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
-import blackrockshooter.stances.Aggressor;
-import blackrockshooter.stances.Defender;
 import blackrockshooter.ui.BRSEnergyOrb;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -136,16 +133,16 @@ public class BlackRockShooter extends CustomPlayer {
 
         // Common
         //retVal.add(Triple_Shot.ID);      // atk
-        //retVal.add(Rapid_Strike.ID);     // atk
-        //retVal.add(Fade_Away.ID);        // def
+        retVal.add(Rapid_Strike.ID);     // atk
+        retVal.add(Fade_Away.ID);        // def
         //retVal.add(Drop_of_Blood.ID);    // bleed
         //retVal.add(Run_Away.ID);         // draw + exhaust
-        retVal.add(Breakthrough.ID);     // atk + str
+        retVal.add(Breakthrough.ID);     // atk + aggro
         //retVal.add(Backstep.ID);         // atk + def
         //retVal.add(Sidestep.ID);         // def
         //retVal.add(Rapid_Cannon.ID);     // atk + draw
         //retVal.add(Volcain_Cannon.ID);   // atk
-        retVal.add(See_through.ID);      // def + dex
+        retVal.add(See_through.ID);      // def + aggro
         //retVal.add(Crouch.ID);           // def + draw
         //retVal.add(Jump_Shot.ID);        // atk + def + draw
         //retVal.add(Pierce.ID);           // atk + vuln.
@@ -216,6 +213,8 @@ public class BlackRockShooter extends CustomPlayer {
         // TODO: Change leathal blast to something else
         // TODO: Reowrk Re-Igition
         // TODO: change triple shot pic
+        // TODO: make card that makes next X attacks cost zero
+        // TODO: make card that plays attack on top of deck
         return retVal;
     }
 

@@ -1,14 +1,12 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.cards.AbstractDynamicCard;
-import blackrockshooter.stances.Defender;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import blackrockshooter.stances.Aggressor;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.characters.BlackRockShooter;
 
@@ -19,7 +17,7 @@ public class See_through extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 6(8) Block. Gain 2(3) Dexterity. Enter Calm.
+     * Gain 6(8) Block. Enter Aggressor.
      */
 
     // TEXT DECLARATION 
@@ -55,7 +53,7 @@ public class See_through extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Defender()));
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Aggressor()));
     }
 
     // Upgraded stats.
