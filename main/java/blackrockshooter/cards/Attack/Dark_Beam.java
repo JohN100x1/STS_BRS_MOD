@@ -32,6 +32,7 @@ public class Dark_Beam extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int MAGIC = 2;
     private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int DAMAGE = 0;
 
     // /STAT DECLARATION/
 
@@ -39,6 +40,7 @@ public class Dark_Beam extends AbstractDynamicCard {
     public Dark_Beam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = MAGIC;
+        baseDamage = DAMAGE;
     }
 
     // Actions the card should do.

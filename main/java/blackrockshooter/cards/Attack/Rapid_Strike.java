@@ -35,7 +35,7 @@ public class Rapid_Strike extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 2;
     private static final int AMOUNT = 4;
     private static final int UPGRADE_PLUS_AMOUNT = 1;
 

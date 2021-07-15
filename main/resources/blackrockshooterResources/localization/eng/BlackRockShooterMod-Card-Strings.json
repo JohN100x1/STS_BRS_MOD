@@ -182,8 +182,8 @@
   },
   "blackrockshooter:Over_Limit": {
     "NAME": "Over Limit",
-    "DESCRIPTION": "Double your Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Dexterity."
+    "DESCRIPTION": "Your next X attacks cost zero. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your next X attacks cost zero."
   },
   "blackrockshooter:Vulcannon": {
     "NAME": "Vulcannon",

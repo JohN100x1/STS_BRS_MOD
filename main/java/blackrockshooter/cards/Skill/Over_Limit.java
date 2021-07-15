@@ -17,7 +17,7 @@ public class Over_Limit extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Double your Dexterity. (Exhaust.)
+     * Your next X attacks cost zero. (Exhaust.)
      */
 
 
@@ -26,7 +26,7 @@ public class Over_Limit extends AbstractDynamicCard {
     public static final String ID = BlackRockShooterMod.makeID(Over_Limit.class.getSimpleName());
     public static final String IMG = makeCardPath("Over_Limit.png");
 
-    // /TEXT DECLARATION/
+    // /TEXT DECLARATION/``
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
@@ -38,7 +38,7 @@ public class Over_Limit extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
-    private static final int COST = 1;
+    private static final int COST = -1;
 
 
     // /STAT DECLARATION/
@@ -52,7 +52,7 @@ public class Over_Limit extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new Over_Limit_act());
+        AbstractDungeon.actionManager.addToBottom(new Over_Limit_act(p, this.freeToPlayOnce, this.energyOnUse, this.upgraded));
     }
 
     //Upgraded stats.

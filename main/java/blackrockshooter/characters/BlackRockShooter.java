@@ -193,7 +193,7 @@ public class BlackRockShooter extends CustomPlayer {
         // Rare
         //retVal.add(Double_Team.ID);      // x2 cards played
         //retVal.add(Obliteration_Cannon.ID);// atk
-        //retVal.add(Over_Limit.ID);       // dex
+        retVal.add(Over_Limit.ID);       // free atk
         //retVal.add(BB_Genocide.ID);      // atk + bleed (AOE)
         //retVal.add(Vortex_Cannon.ID);    // atk
         //retVal.add(Perforate.ID);        // bleed
@@ -213,8 +213,8 @@ public class BlackRockShooter extends CustomPlayer {
         // TODO: Change leathal blast to something else
         // TODO: Reowrk Re-Igition
         // TODO: change triple shot pic
-        // TODO: make card that makes next X attacks cost zero
         // TODO: make card that plays attack on top of deck
+        // TODO: make a zero-cost temp attack card called feint that is an attack that gives block
         return retVal;
     }
 
