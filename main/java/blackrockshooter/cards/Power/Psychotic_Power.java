@@ -16,7 +16,7 @@ public class Psychotic_Power extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Whenever a card is Exhausted, draw 1 card, gain 1 [E] , and lose 2 HP.
+     * Whenever a card is Exhausted, gain 1 [E] and lose 2 HP.
      */
 
 

@@ -54,7 +54,6 @@ public class Psychotic_Power_pw extends AbstractPower implements CloneablePowerI
     public void onExhaust(final AbstractCard card) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flash();
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(this.amount));
             AbstractDungeon.actionManager.addToBottom(new LoseHPAction(this.owner, this.owner, 2 * this.amount));
         }

@@ -15,6 +15,10 @@
     "NAME": "Charge Shot",
     "DESCRIPTION": "Deal !D! Damage. NL Deals additional !M! damage for each attack played this turn."
   },
+  "blackrockshooter:Star_Shot": {
+    "NAME": "Star Shot",
+    "DESCRIPTION": "Deal !D! Damage. NL Deals additional !M! damage for each attack played this combat."
+  },
   "blackrockshooter:Breakthrough": {
     "NAME": "Breakthrough",
     "DESCRIPTION": "Deal !D! Damage. NL Enter blackrockshooter:Aggressor."
@@ -70,7 +74,7 @@
   },
   "blackrockshooter:Psychotic_Power": {
     "NAME": "Psychotic Power",
-    "DESCRIPTION": "Whenever a card is Exhausted, draw !M! card, gain [E] , and lose 2 HP."
+    "DESCRIPTION": "Whenever a card is Exhausted, gain [E] and lose 2 HP."
   },
   "blackrockshooter:Demonic_Power": {
     "NAME": "Demonic Power",
@@ -287,10 +291,6 @@
     "NAME": "Rehabilitate",
     "DESCRIPTION": "Unplayable. NL When this card is Exhausted, gain [E] [E] and draw !M! cards."
   },
-  "blackrockshooter:Star_Shot": {
-    "NAME": "Star Shot",
-    "DESCRIPTION": "Deal !D! Damage. NL Deals additional !M! damage for each attack played this combat."
-  },
   "blackrockshooter:React": {
     "NAME": "React",
     "DESCRIPTION": "If the enemy intends to attack, gain !M! Dexterity. NL If the enemy doesn't intend to attack, gain !M! Strength."
@@ -306,13 +306,11 @@
   },
   "blackrockshooter:Rapid_Strike": {
     "NAME": "Rapid Strike",
-    "DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by Strength.",
-    "UPGRADE_DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by other effects."
+    "DESCRIPTION": "Deal !M! Damage 5 times. NL Damage is not affected by Strength."
   },
   "blackrockshooter:Fade_Away": {
     "NAME": "Fade Away",
-    "DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by other effects."
+    "DESCRIPTION": "Gain !M! block 5 times. NL Block is not affected by Dexterity."
   },
   "blackrockshooter:Dark_Beam": {
     "NAME": "Dark Beam",
