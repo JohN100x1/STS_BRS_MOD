@@ -2,14 +2,11 @@ package blackrockshooter.cards.Temp;
 
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
-import blackrockshooter.relics.Rock_Cannon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import blackrockshooter.powers.Rock_Cannon_Mk2_pw;
 
@@ -17,7 +14,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Auto_Attack extends AbstractDynamicCard {
 
-    // Deal 2 Damage 2(3) times. Exhaust.
+    // Deal 2(3) Damage 2 times. Exhaust.
 
     public static final String ID = BlackRockShooterMod.makeID(Auto_Attack.class.getSimpleName());
     public static final String IMG = makeCardPath("Auto_Attack.png");
@@ -31,8 +28,8 @@ public class Auto_Attack extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 2;
+    private static final int UPGRADE_PLUS_DMG = 1;
     private static final int AMOUNT = 2;
-    private static final int UPGRADE_PLUS_AMOUNT = 1;
 
     // /STAT DECLARATION/
 
@@ -62,7 +59,7 @@ public class Auto_Attack extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

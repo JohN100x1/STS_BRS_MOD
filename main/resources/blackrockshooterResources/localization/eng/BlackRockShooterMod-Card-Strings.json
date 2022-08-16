@@ -117,9 +117,9 @@
     "NAME": "Crouch",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card."
   },
-  "blackrockshooter:Outspeed": {
-    "NAME": "Outspeed",
-    "DESCRIPTION": "Gain !B! Block. NL Apply 1 blackrockshooter:Slow. NL Exhaust."
+  "blackrockshooter:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Vulnerable."
   },
   "blackrockshooter:Unreal_Motion": {
     "NAME": "Unreal Motion",

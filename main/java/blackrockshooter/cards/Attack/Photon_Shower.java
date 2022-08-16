@@ -14,7 +14,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Photon_Shower extends AbstractDynamicCard {
 
-    // Deal 4 Damage to ALL enemies 3(4) times. Exhaust.
+    // Deal 4 Damage to ALL enemies 4(5) times. Exhaust.
 
     public static final String ID = BlackRockShooterMod.makeID(Photon_Shower.class.getSimpleName());
     public static final String IMG = makeCardPath("Photon_Shower.png");
@@ -28,7 +28,7 @@ public class Photon_Shower extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 4;
-    private static final int AMOUNT = 3;
+    private static final int AMOUNT = 4;
     private static final int UPGRADE_PLUS_AMOUNT = 1;
 
     // /STAT DECLARATION/

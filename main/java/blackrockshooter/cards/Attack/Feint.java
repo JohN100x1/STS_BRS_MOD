@@ -1,4 +1,4 @@
-package blackrockshooter.cards.Skill;
+package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
@@ -8,51 +8,52 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.SlowPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Outspeed extends AbstractDynamicCard {
+public class Feint extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 5 (8) block. Apply Slow. Exhaust.
+     * Gain 9 block. Apply 1(2) Vulnerable.
      */
 
 
     // TEXT DECLARATION
 
-    public static final String ID = BlackRockShooterMod.makeID(Outspeed.class.getSimpleName());
-    public static final String IMG = makeCardPath("Outspeed.png");
+    public static final String ID = BlackRockShooterMod.makeID(Feint.class.getSimpleName());
+    public static final String IMG = makeCardPath("Feint.png");
 
 
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int BLOCK = 9;
+    private static final int MAGIC = 1;
+    private static final int UPGRADE_PLUS_MAGIC = 1;
 
 
     // /STAT DECLARATION/
 
 
-    public Outspeed() {
+    public Feint() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        exhaust = true;
+        baseMagicNumber = magicNumber = MAGIC;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new SlowPower(m, 0)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
     }
 
     //Upgraded stats.
@@ -60,7 +61,7 @@ public class Outspeed extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }

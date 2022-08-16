@@ -11,13 +11,12 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Toxic_Strike extends AbstractDynamicCard {
 
-    // Deal 9(10) Damage. Apply 9(10) Poison.
+    // Deal 8(10) Damage. Apply 8(10) Poison.
 
     public static final String ID = BlackRockShooterMod.makeID(Toxic_Strike.class.getSimpleName());
     public static final String IMG = makeCardPath("Toxic_Strike.png");
@@ -30,10 +29,10 @@ public class Toxic_Strike extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int MAGIC = 9;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int MAGIC = 8;
+    private static final int UPGRADE_PLUS_MAGIC = 2;
 
     // /STAT DECLARATION/
 

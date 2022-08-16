@@ -18,7 +18,7 @@ public class Necrotic_Power extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * (Innate.) Whenever you play a card, apply 2 Poison to ALL enemies.
+     * (Innate.) Whenever you play a card, apply 1 Poison to ALL enemies.
      */
 
 
@@ -42,7 +42,7 @@ public class Necrotic_Power extends AbstractDynamicCard {
 
     private static final int COST = 3;
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
 
     // Hey want a second magic/damage/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable

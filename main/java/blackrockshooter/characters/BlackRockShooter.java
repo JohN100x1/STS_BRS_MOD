@@ -149,7 +149,7 @@ public class BlackRockShooter extends CustomPlayer {
         //retVal.add(Photon_Shower.ID);    // atk (AOE)
         //retVal.add(Repel.ID);            // atk (AOE)
         //retVal.add(Discern.ID);          // vuln. + weak
-        //retVal.add(Outspeed.ID);         // def + slow
+        //retVal.add(Feint.ID);            // def + vuln.
         //retVal.add(Annoying_Skull.ID);   // skull
 
         // Uncommon
@@ -214,11 +214,15 @@ public class BlackRockShooter extends CustomPlayer {
         // TODO: Reowrk Re-Igition
         // TODO: change triple shot pic
         // TODO: make card that plays attack on top of deck
-        // TODO: make a zero-cost temp attack card called feint that is an attack that gives block
+        // TODO: make an attack card that heals
+        // TODO: make a power that gives gold on non-minions killed (call it treasure hunt)
+        // TODO: heat system that enters overheated stance after certain value (attacks you play gain heat).
+        // TODO: make overheated stance, reduce atk and def
+        // TODO: make cards that remove heat as bonus effect.
         return retVal;
     }
 
-    // Starting Relics	
+    // Starting Relics
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(Blue_Flame.ID);
