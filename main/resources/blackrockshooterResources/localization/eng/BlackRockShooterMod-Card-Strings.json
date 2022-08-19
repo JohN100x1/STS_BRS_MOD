@@ -25,7 +25,8 @@
   },
   "blackrockshooter:Run_Away": {
     "NAME": "Run Away",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust 1 card."
+    "DESCRIPTION": "Draw !M! card. NL Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust 1 card."
   },
   "blackrockshooter:Explosive_Shot": {
     "NAME": "Explosive Shot",
@@ -43,12 +44,14 @@
   },
   "blackrockshooter:Outrage": {
     "NAME": "Outrage",
-    "DESCRIPTION": "Enter Wrath. At the end of 3 turns, exit your Stance and become Confused."
+    "DESCRIPTION": "Enter blackrockshooter:Aggressor. At the end of your turn, become Confused."
   },
   "blackrockshooter:Perforate": {
     "NAME": "Perforate",
     "DESCRIPTION": "Apply 1 Weak. NL Apply 1 Vulnerable. NL Apply !M! blackrockshooter:Bleed. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": ["[#ff0000]Die."]
+    "EXTENDED_DESCRIPTION": [
+      "[#ff0000]Die."
+    ]
   },
   "blackrockshooter:Drop_of_Blood": {
     "NAME": "Drop of Blood",
@@ -105,7 +108,6 @@
     "UPGRADE_DESCRIPTION": "Deal !D! Damage. NL If this is the first attack you played this turn, gain [E] and draw !M! card."
   },
   "blackrockshooter:Ponder": {
-
     "NAME": "Ponder",
     "DESCRIPTION": "Scry !M!. NL Draw 1 card."
   },
@@ -174,7 +176,10 @@
   "blackrockshooter:Execute": {
     "NAME": "Execute",
     "DESCRIPTION": "Deal !D! % of max HP. NL If Fatal, permanently increase this card's damage by !M! %. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [" NL (", " Damage.)"]
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Damage.)"
+    ]
   },
   "blackrockshooter:Madness_Rain": {
     "NAME": "Rain of Madness",
@@ -226,7 +231,9 @@
   "blackrockshooter:BB_Genocide": {
     "NAME": "BB Genocide",
     "DESCRIPTION": "Deal !D! Damage to ALL enemies 3 times. NL Any blackrockshooter:Bleed stacks become 10, otherwise Apply 3 blackrockshooter:Bleed.",
-    "EXTENDED_DESCRIPTION": ["@Muhahaha!@"]
+    "EXTENDED_DESCRIPTION": [
+      "@Muhahaha!@"
+    ]
   },
   "blackrockshooter:See_through": {
     "NAME": "See through",
@@ -289,7 +296,8 @@
   },
   "blackrockshooter:Rehabilitate": {
     "NAME": "Rehabilitate",
-    "DESCRIPTION": "Unplayable. NL When this card is Exhausted, gain [E] [E] and draw !M! cards."
+    "DESCRIPTION": "Unplayable. NL When this card is Exhausted, gain [E] [E] and draw !M! cards.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When this card is Exhausted, gain [E] [E] [E] and draw !M! cards."
   },
   "blackrockshooter:React": {
     "NAME": "React",
