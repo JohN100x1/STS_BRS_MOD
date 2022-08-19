@@ -4,6 +4,7 @@ import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
 import blackrockshooter.powers.Outrage_pw;
+import blackrockshooter.stances.Aggressor;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,7 +22,7 @@ public class Outrage extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Enter Wraith. At the end of 3 turns, exit your Stance and become Confused.
+     * Enter Aggressor. At the end of your turn, become Confused.
      */
 
 
@@ -42,7 +43,7 @@ public class Outrage extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 1;
 
     // Hey want a second magic/damage/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
@@ -63,20 +64,9 @@ public class Outrage extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("RAGE"));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShockWaveEffect(p.hb.cX, p.hb.cY, Color.PURPLE, ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction("Wrath"));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new Outrage_pw(p, p, magicNumber), magicNumber));
-        /*
-        Hey do you see this "amount" and "stackAmount" up here^ (press ctrl+p inside the parentheses to see parameters)
-        THIS DOES NOT MEAN APPLY 1 POWER 1 TIMES. If you put 2 in both numbers it would apply 2. NOT "2 STACKS, 2 TIMES".
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Aggressor()));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new Outrage_pw(p, p, magicNumber), magicNumber));
 
-        The stackAmount is for telling ApplyPowerAction what to do if a stack already exists. Which means that it will go
-        "ah, I see this power has an ID ("") that matches the power I received. I will therefore instead add the stackAmount value
-        to this existing power's amount" (Thank you Johnny)
-
-        Which is why if we want to apply 2 stacks with this card every time, want 2 in both numbers -
-        "Always add 2, even if the player already has this power."
-        */
     }
 
     //Upgraded stats.
