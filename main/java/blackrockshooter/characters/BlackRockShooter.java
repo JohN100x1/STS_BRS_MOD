@@ -1,10 +1,16 @@
 package blackrockshooter.characters;
 
-import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.Attack.*;
-import blackrockshooter.cards.Skill.*;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
+import blackrockshooter.BlackRockShooterMod;
+import blackrockshooter.cards.Attack.Breakthrough;
+import blackrockshooter.cards.Attack.Rapid_Strike;
+import blackrockshooter.cards.Attack.Strike_Black;
+import blackrockshooter.cards.Skill.Defend_Black;
+import blackrockshooter.cards.Skill.Fade_Away;
+import blackrockshooter.cards.Skill.See_through;
+import blackrockshooter.cards.Skill.Vulcannon;
+import blackrockshooter.relics.Blue_Flame;
 import blackrockshooter.ui.BRSEnergyOrb;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
@@ -28,7 +34,6 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import blackrockshooter.relics.Blue_Flame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,15 +49,16 @@ public class BlackRockShooter extends CustomPlayer {
         public static AbstractPlayer.PlayerClass Black_Rock_Shooter;
         @SpireEnum(name = "BRS_COLOR")
         public static AbstractCard.CardColor BRS_BLACK;
-        @SpireEnum(name = "BRS_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "BRS_COLOR")
+        @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
 
     // =============== BASE STATS =================
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 70;
-    public static final int MAX_HP = 70;
+    public static final int STARTING_HP = 78;
+    public static final int MAX_HP = 78;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 2;
@@ -193,7 +199,7 @@ public class BlackRockShooter extends CustomPlayer {
         // Rare
         //retVal.add(Double_Team.ID);      // x2 cards played
         //retVal.add(Obliteration_Cannon.ID);// atk
-        retVal.add(Over_Limit.ID);       // free atk
+        //retVal.add(Over_Limit.ID);       // free atk
         //retVal.add(BB_Genocide.ID);      // atk + bleed (AOE)
         //retVal.add(Vortex_Cannon.ID);    // atk
         //retVal.add(Perforate.ID);        // bleed
@@ -211,14 +217,15 @@ public class BlackRockShooter extends CustomPlayer {
         // TODO: Make card scale from cards played this combat
         // TODO: Add a signature power for Black Rock Shooter
         // TODO: Change leathal blast to something else
-        // TODO: Reowrk Re-Igition
+        // TODO: Rework Re-Igition
         // TODO: change triple shot pic
         // TODO: make card that plays attack on top of deck
-        // TODO: make an attack card that heals
-        // TODO: make a power that gives gold on non-minions killed (call it treasure hunt)
         // TODO: heat system that enters overheated stance after certain value (attacks you play gain heat).
         // TODO: make overheated stance, reduce atk and def
         // TODO: make cards that remove heat as bonus effect.
+        // TODO: IDEA -- make an attack card that heals. Upgrade makes it have retain.
+        // TODO: IDEA -- make a card that exhausts hand, gain 1 strength for each card exhausted. replace demonic power?
+        // TODO: IDEA -- make a skill that buffs an enemy but you gain gold when you kill it (call it treasure hunt)
         return retVal;
     }
 
@@ -332,7 +339,7 @@ public class BlackRockShooter extends CustomPlayer {
 
     @Override
     public List<CutscenePanel> getCutscenePanels() {
-        List<CutscenePanel> panels = new ArrayList();
+        List<CutscenePanel> panels = new ArrayList<>();
         panels.add(new CutscenePanel("blackrockshooterResources/images/char/BRSCharacter/cutscene/scene1.png", "ATTACK_MAGIC_BEAM"));
         panels.add(new CutscenePanel("blackrockshooterResources/images/char/BRSCharacter/cutscene/scene2.png"));
         panels.add(new CutscenePanel("blackrockshooterResources/images/char/BRSCharacter/cutscene/scene3.png"));
