@@ -24,7 +24,7 @@ public class Aggressor extends AbstractStance {
 
     private static long sfxId = -1;
 
-    public Aggressor(){
+    public Aggressor() {
         this.ID = STANCE_ID;
         this.name = stanceStrings.NAME;
         this.updateDescription();
@@ -32,12 +32,12 @@ public class Aggressor extends AbstractStance {
 
     @Override
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 1.2F : damage;
+        return type == DamageInfo.DamageType.NORMAL ? damage * 2.0F : damage;
     }
 
     @Override
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 0.8F : damage;
+        return type == DamageInfo.DamageType.NORMAL ? damage * 0.5F : damage;
     }
 
     @Override
@@ -60,7 +60,7 @@ public class Aggressor extends AbstractStance {
 
     @Override
     public void atStartOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction("Neutral"));
+        AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(new Overheated()));
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Aggressor extends AbstractStance {
 
 
     @Override
-    public void updateDescription(){
+    public void updateDescription() {
         this.description = DESCRIPTIONS[0];
     }
 }

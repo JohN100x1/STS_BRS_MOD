@@ -15,8 +15,8 @@ public class Aggressor_particle_eff extends AbstractGameEffect {
     private float x;
     private float y;
     private float vY;
-    private float dur_div2;
-    private TextureAtlas.AtlasRegion img;
+    private final float dur_div2;
+    private final TextureAtlas.AtlasRegion img;
 
     public Aggressor_particle_eff() {
         this.img = ImageMaster.GLOW_SPARK;
@@ -26,10 +26,10 @@ public class Aggressor_particle_eff extends AbstractGameEffect {
         this.color = new Color(MathUtils.random(0.0F, 0.5F), 1F, 1F, 0.0F);
         this.x = AbstractDungeon.player.hb.cX + MathUtils.random(-AbstractDungeon.player.hb.width / 2.0F - 30.0F * Settings.scale, AbstractDungeon.player.hb.width / 2.0F + 30.0F * Settings.scale);
         this.y = AbstractDungeon.player.hb.cY + MathUtils.random(-AbstractDungeon.player.hb.height / 2.0F - -10.0F * Settings.scale, AbstractDungeon.player.hb.height / 2.0F - 10.0F * Settings.scale);
-        this.x -= (float)this.img.packedWidth / 2.0F;
-        this.y -= (float)this.img.packedHeight / 2.0F;
+        this.x -= (float) this.img.packedWidth / 2.0F;
+        this.y -= (float) this.img.packedHeight / 2.0F;
         this.renderBehind = MathUtils.randomBoolean(0.2F + (this.scale - 0.5F));
-        this.rotation = MathUtils.random(-8.0F, 8.0F);
+        this.rotation = 0.0F;
     }
 
     public void update() {
@@ -50,7 +50,7 @@ public class Aggressor_particle_eff extends AbstractGameEffect {
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);
         sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x, this.y + this.vY, (float)this.img.packedWidth / 2.0F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale * 0.8F, (0.1F + (this.dur_div2 * 2.0F - this.duration) * 2.0F * this.scale) * Settings.scale, this.rotation);
+        sb.draw(this.img, this.x, this.y + this.vY, (float) this.img.packedWidth / 2.0F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale * 0.8F, (0.1F + (this.dur_div2 * 2.0F - this.duration) * 2.0F * this.scale) * Settings.scale, this.rotation);
         sb.setBlendFunction(770, 771);
     }
 
