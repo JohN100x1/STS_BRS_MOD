@@ -1,12 +1,12 @@
 package blackrockshooter.cards.Attack;
 
+import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.actions.Madness_Rain_act;
 import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.characters.BlackRockShooter;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
@@ -24,7 +24,7 @@ public class Madness_Rain extends AbstractDynamicCard {
 
     private static final int COST = -1;
 
-    private static final int DAMAGE = 1;
+    private static final int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/
