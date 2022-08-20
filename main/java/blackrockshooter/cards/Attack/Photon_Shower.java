@@ -14,7 +14,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Photon_Shower extends AbstractDynamicCard {
 
-    // Deal 4 Damage to ALL enemies 4(5) times. Exhaust.
+    // Deal 4 Damage to ALL enemies 3(4) times. Exhaust.
 
     public static final String ID = BlackRockShooterMod.makeID(Photon_Shower.class.getSimpleName());
     public static final String IMG = makeCardPath("Photon_Shower.png");
@@ -28,8 +28,8 @@ public class Photon_Shower extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int DAMAGE = 4;
-    private static final int AMOUNT = 4;
-    private static final int UPGRADE_PLUS_AMOUNT = 1;
+    private static final int MAGIC = 3;
+    private static final int UPGRADE_PLUS_MAGIC = 1;
 
     // /STAT DECLARATION/
 
@@ -37,7 +37,7 @@ public class Photon_Shower extends AbstractDynamicCard {
     public Photon_Shower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = magicNumber = AMOUNT;
+        baseMagicNumber = magicNumber = MAGIC;
         exhaust = true;
     }
 
@@ -56,7 +56,7 @@ public class Photon_Shower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }
