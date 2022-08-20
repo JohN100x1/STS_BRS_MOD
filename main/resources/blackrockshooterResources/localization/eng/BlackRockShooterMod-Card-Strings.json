@@ -96,7 +96,7 @@
   "blackrockshooter:Stat_Boost": {
     "NAME": "Stat Boost",
     "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Gain !M! Focus."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Add a copy of this card to your hand."
   },
   "blackrockshooter:Open_Fire": {
     "NAME": "Open Fire",
