@@ -18,7 +18,7 @@ public class Demonic_Power extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * (Innate.) Whenever you play an attack, gain 1 Strength.
+     * (Retain.) Whenever you play an attack, gain 1 Strength.
      */
 
 
@@ -81,7 +81,7 @@ public class Demonic_Power extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
+            this.selfRetain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

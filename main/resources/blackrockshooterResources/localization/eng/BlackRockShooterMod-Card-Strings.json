@@ -82,7 +82,7 @@
   "blackrockshooter:Demonic_Power": {
     "NAME": "Demonic Power",
     "DESCRIPTION": "Whenever you play an attack, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play an attack, gain !M! Strength."
+    "UPGRADE_DESCRIPTION": "Retain. NL Whenever you play an attack, gain !M! Strength."
   },
   "blackrockshooter:Necrotic_Power": {
     "NAME": "Necrotic Power",
