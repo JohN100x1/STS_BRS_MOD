@@ -52,7 +52,7 @@ public class Over_Limit extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new Over_Limit_act(p, this.freeToPlayOnce, this.energyOnUse, this.upgraded));
+        AbstractDungeon.actionManager.addToBottom(new Over_Limit_act(p, this.freeToPlayOnce, this.energyOnUse));
     }
 
     //Upgraded stats.
