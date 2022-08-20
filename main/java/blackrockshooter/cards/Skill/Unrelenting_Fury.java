@@ -21,7 +21,7 @@ public class Unrelenting_Fury extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Whenever you play an attack this turn, gain 1(2) Temporary Strength.
+     * Whenever you play an attack this turn, gain 1 Temporary Strength.
      */
 
 
@@ -38,9 +38,9 @@ public class Unrelenting_Fury extends AbstractDynamicCard {
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.SKILL;
     public static final AbstractCard.CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final int MAGIC = 1;
-    private static final int UPGRADE_PLUS_MAGIC = 1;
 
 
     // /STAT DECLARATION/
@@ -64,7 +64,7 @@ public class Unrelenting_Fury extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }
