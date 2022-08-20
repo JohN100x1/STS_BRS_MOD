@@ -30,7 +30,7 @@
   },
   "blackrockshooter:Explosive_Shot": {
     "NAME": "Explosive Shot",
-    "DESCRIPTION": "Deal !D! Damage. NL Exhaust 1 card."
+    "DESCRIPTION": "Deal !D! Damage. NL Exhaust 1 card. Add a Burn into your discard pile."
   },
   "blackrockshooter:Discern": {
     "NAME": "Discern",
