@@ -17,7 +17,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 public class Stun_Snipe extends AbstractDynamicCard {
 
-    // Deal 7(10) Damage. Apply 1 Stunned. Apply 20 Plated Armour. Exhaust.
+    // Deal 7 Damage. Apply 1 Stunned. Apply 20(15) Plated Armour. Exhaust.
 
     public static final String ID = BlackRockShooterMod.makeID(Stun_Snipe.class.getSimpleName());
     public static final String IMG = makeCardPath("Stun_Snipe.png");
@@ -31,8 +31,8 @@ public class Stun_Snipe extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 3;
     private static final int MAGIC = 20;
+    private static final int UPGRADE_PLUS_MAGIC = -5;
 
     // /STAT DECLARATION/
 
@@ -47,7 +47,7 @@ public class Stun_Snipe extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new StunMonsterPower(m), 1));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new PlatedArmorPower(m, magicNumber), magicNumber));
     }
@@ -58,7 +58,7 @@ public class Stun_Snipe extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
             initializeDescription();
         }
     }
