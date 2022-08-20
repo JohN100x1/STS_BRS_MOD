@@ -1,13 +1,13 @@
 package blackrockshooter.cards.Power;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
 import blackrockshooter.powers.Psychotic_Power_pw;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
@@ -16,7 +16,7 @@ public class Psychotic_Power extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Whenever a card is Exhausted, gain 1 [E] and lose 2 HP.
+     * Whenever a card is Exhausted, gain 1 [E] and lose 1 HP.
      */
 
 

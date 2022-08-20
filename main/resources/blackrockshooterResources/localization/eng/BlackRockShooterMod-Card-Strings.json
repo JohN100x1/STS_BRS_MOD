@@ -77,7 +77,7 @@
   },
   "blackrockshooter:Psychotic_Power": {
     "NAME": "Psychotic Power",
-    "DESCRIPTION": "Whenever a card is Exhausted, gain [E] and lose 2 HP."
+    "DESCRIPTION": "Whenever a card is Exhausted, gain [E] and lose 1 HP."
   },
   "blackrockshooter:Demonic_Power": {
     "NAME": "Demonic Power",
