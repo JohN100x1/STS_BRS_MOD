@@ -44,7 +44,7 @@
   },
   "blackrockshooter:Outrage": {
     "NAME": "Outrage",
-    "DESCRIPTION": "Enter blackrockshooter:Aggressor. At the end of your turn, become Confused."
+    "DESCRIPTION": "Enter blackrockshooter:Aggressor. NL At the end of your turn, become Confused."
   },
   "blackrockshooter:Perforate": {
     "NAME": "Perforate",

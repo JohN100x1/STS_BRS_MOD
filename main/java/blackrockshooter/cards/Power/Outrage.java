@@ -45,11 +45,6 @@ public class Outrage extends AbstractDynamicCard {
     private static final int UPGRADE_COST = 0;
     private static final int MAGIC = 1;
 
-    // Hey want a second magic/damage/block/unique number??? Great!
-    // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
-    // that's how you get your own custom variable that you can use for anything you like.
-    // Feel free to explore other mods to see what variables they personally have and create your own ones.
-
     // /STAT DECLARATION/
 
 
