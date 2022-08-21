@@ -3,12 +3,11 @@ package blackrockshooter.cards.Skill;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BlurPower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
@@ -17,7 +16,7 @@ public class Evade extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Gain 7 (10) block. Block is not removed at the start of your next turn.
+     * Gain 6 (9) block. When this card is Exhausted, add a copy of this card to your hand. Exhaust.
      */
 
 
@@ -35,7 +34,7 @@ public class Evade extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 6;
     private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int MAGIC = 1;
 
@@ -47,13 +46,14 @@ public class Evade extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = MAGIC;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BlurPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(makeStatEquivalentCopy(), magicNumber));
     }
 
     //Upgraded stats.

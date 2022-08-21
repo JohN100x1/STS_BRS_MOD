@@ -113,7 +113,7 @@
   },
   "blackrockshooter:Evade": {
     "NAME": "Evade",
-    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn."
+    "DESCRIPTION": "Gain !B! Block. NL When this card is Exhausted, add a copy of this card to your hand. NL Exhaust."
   },
   "blackrockshooter:Crouch": {
     "NAME": "Crouch",
