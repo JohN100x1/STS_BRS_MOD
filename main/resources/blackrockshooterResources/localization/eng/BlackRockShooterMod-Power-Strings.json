@@ -1,4 +1,11 @@
 {
+  "blackrockshooter:Treasure_Hunt_pw": {
+    "NAME": "Treasure Hunt",
+    "DESCRIPTIONS": [
+      "When the enemy dies, gain #b",
+      " Gold."
+    ]
+  },
   "blackrockshooter:Psychotic_Power_pw": {
     "NAME": "Psychotic Power",
     "DESCRIPTIONS": [
@@ -55,12 +62,6 @@
     "NAME": "Sanctuary",
     "DESCRIPTIONS": [
       "Every 3 times you gain #yBlock, gain #b1 #yDexterity."
-    ]
-  },
-  "blackrockshooter:Deadly_Decree_pw": {
-    "NAME": "Deadly Decree",
-    "DESCRIPTIONS": [
-      "Evoking #ySkulls Apply #yPoison equal to the enemy's current amount instead."
     ]
   },
   "blackrockshooter:Outrage_pw": {

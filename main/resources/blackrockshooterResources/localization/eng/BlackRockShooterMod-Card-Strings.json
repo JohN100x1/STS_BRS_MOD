@@ -30,7 +30,7 @@
   },
   "blackrockshooter:Explosive_Shot": {
     "NAME": "Explosive Shot",
-    "DESCRIPTION": "Deal !D! Damage. NL Exhaust 1 card. Add a Burn into your discard pile."
+    "DESCRIPTION": "Deal !D! Damage. NL Exhaust 1 card. NL Add a Burn into your discard pile."
   },
   "blackrockshooter:Discern": {
     "NAME": "Discern",
@@ -181,6 +181,11 @@
       " Damage.)"
     ]
   },
+  "blackrockshooter:Treasure_Hunt": {
+    "NAME": "Treasure Hunt",
+    "DESCRIPTION": "Enemy doubles max HP. NL When the enemy dies, gain gold equal to half its max HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enemy doubles max HP. NL When the enemy dies, gain gold equal to half its max HP. NL Exhaust."
+  },
   "blackrockshooter:Madness_Rain": {
     "NAME": "Rain of Madness",
     "DESCRIPTION": "Deal !D! Damage to ALL enemies 2X times. NL Exhaust."
@@ -255,11 +260,6 @@
   "blackrockshooter:Attack_Trail": {
     "NAME": "Attack Trail",
     "DESCRIPTION": "Whenever you play an attack this turn, gain !M! Block."
-  },
-  "blackrockshooter:Deadly_Decree": {
-    "NAME": "Deadly Decree",
-    "DESCRIPTION": "Evoking blackrockshooter:Skulls apply Poison equal to the enemy's current amount instead.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Evoking blackrockshooter:Skulls apply Poison equal to the enemy's current amount instead."
   },
   "blackrockshooter:Lethal_Blast": {
     "NAME": "Lethal Blast",
