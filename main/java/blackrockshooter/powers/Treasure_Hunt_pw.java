@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 
 import static blackrockshooter.BlackRockShooterMod.makePowerPath;
 
-public class TreasureHunt_pw extends AbstractPower implements CloneablePowerInterface {
+public class Treasure_Hunt_pw extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
     public static final String POWER_ID = BlackRockShooterMod.makeID("Treasure_Hunt_pw");
@@ -27,12 +27,12 @@ public class TreasureHunt_pw extends AbstractPower implements CloneablePowerInte
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("Treasure_Hunt84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("Treasure_Hunt32.png"));
 
-    public TreasureHunt_pw(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public Treasure_Hunt_pw(final AbstractCreature owner, final AbstractCreature source) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = amount;
+        this.amount = owner.maxHealth / 2;
         this.source = source;
 
         type = PowerType.DEBUFF;
@@ -56,11 +56,11 @@ public class TreasureHunt_pw extends AbstractPower implements CloneablePowerInte
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new TreasureHunt_pw(owner, source, amount);
+        return new Treasure_Hunt_pw(owner, source);
     }
 }

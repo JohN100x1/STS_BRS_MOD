@@ -3,7 +3,7 @@ package blackrockshooter.cards.Skill;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.AbstractDynamicCard;
 import blackrockshooter.characters.BlackRockShooter;
-import blackrockshooter.powers.TreasureHunt_pw;
+import blackrockshooter.powers.Treasure_Hunt_pw;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -18,7 +18,7 @@ public class Treasure_Hunt extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * (Retain.) Enemy doubles max HP. When the enemy dies, gain gold equal to half its max HP. Exhaust.
+     * (Ethereal.) (Retain.) Enemy doubles max HP. When the enemy dies, gain gold equal to half its max HP. Exhaust.
      */
 
 
@@ -47,14 +47,15 @@ public class Treasure_Hunt extends AbstractDynamicCard {
 
     public Treasure_Hunt() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new TreasureHunt_pw(m, p, m.maxHealth), m.maxHealth));
-        m.maxHealth += m.maxHealth;
-        m.currentHealth += m.currentHealth;
+        m.increaseMaxHp(m.maxHealth, true);
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new Treasure_Hunt_pw(m, p)));
     }
 
     //Upgraded stats.
@@ -62,6 +63,7 @@ public class Treasure_Hunt extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.isEthereal = false;
             this.retain = true;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
