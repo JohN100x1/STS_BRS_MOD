@@ -113,7 +113,7 @@
   },
   "blackrockshooter:Evade": {
     "NAME": "Evade",
-    "DESCRIPTION": "Gain !B! Block. NL When this card is Exhausted, add a copy of this card to your hand. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL When this card is Exhausted, add a copy of it to your hand. NL Exhaust."
   },
   "blackrockshooter:Crouch": {
     "NAME": "Crouch",
