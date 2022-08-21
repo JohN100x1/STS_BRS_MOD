@@ -30,7 +30,7 @@ public class Explosive_Shot extends AbstractDynamicCard {
     public static final CardColor COLOR = BlackRockShooter.Enums.BRS_BLACK;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 17;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
