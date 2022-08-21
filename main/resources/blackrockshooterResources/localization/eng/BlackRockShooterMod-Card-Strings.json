@@ -183,7 +183,7 @@
   },
   "blackrockshooter:Treasure_Hunt": {
     "NAME": "Treasure Hunt",
-    "DESCRIPTION": "Enemy doubles max HP. NL When the enemy dies, gain gold equal to half its max HP. NL Exhaust.",
+    "DESCRIPTION": "Ethereal. NL Enemy doubles max HP. NL When the enemy dies, gain gold equal to half its max HP. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Enemy doubles max HP. NL When the enemy dies, gain gold equal to half its max HP. NL Exhaust."
   },
   "blackrockshooter:Madness_Rain": {
