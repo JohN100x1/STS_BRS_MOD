@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Star_Shot extends AbstractDynamicCard {
+public class Star_Shot extends AbstractDefaultCard {
 
     // Deal 10(14) Damage. Deal an additional 3 damage for each attack played this combat.
 
@@ -48,13 +48,13 @@ public class Star_Shot extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         damage += counterNumber;
         calculateCardDamage(m);
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage-magicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage - magicNumber, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     @Override
     public void applyPowers() {
         int realBaseDamage = baseDamage;
-        baseCounterNumber = magicNumber*attacksPlayedThisCombat();
+        baseCounterNumber = magicNumber * attacksPlayedThisCombat();
         baseDamage += baseCounterNumber;
         super.applyPowers();
         baseDamage = realBaseDamage;
@@ -63,7 +63,7 @@ public class Star_Shot extends AbstractDynamicCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        baseCounterNumber = magicNumber*attacksPlayedThisCombat();
+        baseCounterNumber = magicNumber * attacksPlayedThisCombat();
         int realBaseDamage = baseDamage;
         baseDamage += baseCounterNumber;
         super.calculateCardDamage(mo);
@@ -73,8 +73,8 @@ public class Star_Shot extends AbstractDynamicCard {
 
     public int attacksPlayedThisCombat() {
         int attacks_played = 0;
-        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat){
-            if (c.type == CardType.ATTACK){
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.type == CardType.ATTACK) {
                 ++attacks_played;
             }
         }
