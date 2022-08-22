@@ -19,7 +19,7 @@ public class Rest extends AbstractDefaultCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Retain. Heal 15 of max HP. Remove all your Debuffs. Gain 3(2) sleep. End your turn. Exhaust.
+     * Retain. Heal 20 of max HP. Remove all your Debuffs. Gain 3(2) sleep. End your turn. Exhaust.
      */
 
 

@@ -146,7 +146,7 @@
   },
   "blackrockshooter:Rest": {
     "NAME": "Rest",
-    "DESCRIPTION": "Retain. NL Heal 15 HP. Remove all your Debuffs. NL NL Gain !M! blackrockshooter:Sleep. NL End your turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Heal 20 HP. Remove all your Debuffs. NL NL Gain !M! blackrockshooter:Sleep. NL End your turn. NL Exhaust."
   },
   "blackrockshooter:Pursue": {
     "NAME": "Pursue",
