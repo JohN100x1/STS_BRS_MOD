@@ -1,16 +1,13 @@
 package blackrockshooter.relics;
 
 import basemod.abstracts.CustomRelic;
-import blackrockshooter.cards.Temp.Auto_Attack;
-import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.util.TextureLoader;
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static blackrockshooter.BlackRockShooterMod.makeRelicOutlinePath;
 import static blackrockshooter.BlackRockShooterMod.makeRelicPath;
@@ -44,9 +41,9 @@ public class Blue_Flame extends CustomRelic {
     public void onExhaust(AbstractCard card) {
         if (!triggeredThisCombat) {
             triggeredThisCombat = true;
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new GainEnergyAction(1));
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         }
     }
 
