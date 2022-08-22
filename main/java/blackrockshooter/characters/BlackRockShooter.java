@@ -4,12 +4,11 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.cards.Attack.Breakthrough;
+import blackrockshooter.cards.Attack.Explosive_Shot;
+import blackrockshooter.cards.Attack.Photon_Shower;
 import blackrockshooter.cards.Attack.Rapid_Strike;
-import blackrockshooter.cards.Attack.Strike_Black;
-import blackrockshooter.cards.Skill.Defend_Black;
-import blackrockshooter.cards.Skill.Fade_Away;
-import blackrockshooter.cards.Skill.See_through;
-import blackrockshooter.cards.Skill.Vulcannon;
+import blackrockshooter.cards.Power.Stat_Boost;
+import blackrockshooter.cards.Skill.*;
 import blackrockshooter.relics.Blue_Flame;
 import blackrockshooter.ui.BRSEnergyOrb;
 import com.badlogic.gdx.graphics.Color;
@@ -125,20 +124,33 @@ public class BlackRockShooter extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        // Basic
-        //retVal.add(Strike_Black.ID);     // atk
-        //retVal.add(Strike_Black.ID);     // atk
-        //retVal.add(Strike_Black.ID);     // atk
-        retVal.add(Strike_Black.ID);     // atk
-        retVal.add(Defend_Black.ID);     // def
-        //retVal.add(Defend_Black.ID);     // def
-        //retVal.add(Defend_Black.ID);     // def
-        //retVal.add(Defend_Black.ID);     // def
+        // Keep ===========================================================
+//        retVal.add(Strike_Black.ID);
+//        retVal.add(Defend_Black.ID);
+//        retVal.add(Jump_Shot.ID);
+//        retVal.add(Photon_Shower.ID);
+//        retVal.add(Repel.ID);
+//        retVal.add(Iksa_Blade.ID); -- rework bleed
+//        retVal.add(Parry.ID);
+//        retVal.add(Ponder.ID);
+//        retVal.add(Stun_Snipe.ID);
+//        retVal.add(Bargain.ID);
+//        retVal.add(Keep_Firing.ID);
+//        retVal.add(Unrelenting_Fury.ID);
+//        retVal.add(Explosive_Shot.ID);
+//        retVal.add(Double_Team.ID);
+//        retVal.add(Over_Limit.ID);
+//        retVal.add(BB_Genocide.ID); -- rework bleed
+//        retVal.add(Madness_Rain.ID);
+//        retVal.add(Rehabilitate.ID);
+//        retVal.add(Stat_Boost.ID);
+//        retVal.add(Treasure_Hunt.ID);
+//        retVal.add(Evade.ID);
+
+        // Change ===========================================================
         //retVal.add(Vulcannon.ID);        // atk
         //retVal.add(Charge_Shot.ID);      // atk (bonus dmg)
 
-        // Common
-        //retVal.add(Triple_Shot.ID);      // atk
         retVal.add(Rapid_Strike.ID);     // atk
         retVal.add(Fade_Away.ID);        // def
         //retVal.add(Drop_of_Blood.ID);    // bleed
@@ -150,82 +162,78 @@ public class BlackRockShooter extends CustomPlayer {
         //retVal.add(Volcain_Cannon.ID);   // atk
         retVal.add(See_through.ID);      // def + aggro
         //retVal.add(Crouch.ID);           // def + draw
-        //retVal.add(Jump_Shot.ID);        // atk + def + draw
         //retVal.add(Pierce.ID);           // atk + vuln.
-        //retVal.add(Photon_Shower.ID);    // atk (AOE)
-        //retVal.add(Repel.ID);            // atk (AOE)
-        //retVal.add(Discern.ID);          // vuln. + weak
-        //retVal.add(Feint.ID);            // def + vuln.
-        //retVal.add(Annoying_Skull.ID);   // skull
 
-        // Uncommon
         //retVal.add(Dark_Beam.ID);        // bleed
-        //retVal.add(Blazing_Trail.ID);    // bleed (AOE)
         //retVal.add(Rain_of_Blood.ID);    // bleed
-        //retVal.add(Iksa_Blade.ID);       // atk + bleed
-        //retVal.add(Toxic_Strike.ID);     // atk + poison
-        //retVal.add(Ruined_Cube.ID);      // artifact
         //retVal.add(Burst_Shot.ID);       // atk (bonus dmg)
         //retVal.add(React.ID);            // str or dex
         //retVal.add(Seeing_Everything.ID);// energy
-        //retVal.add(Parry.ID);            // def (special)
         //retVal.add(Whack.ID);            // atk + str
-        //retVal.add(Bargain.ID);          // card manipulation
         //retVal.add(Duck.ID);             // def + dex
         //retVal.add(Charge.ID);           // atk (bonus energy, draw)
         //retVal.add(Pursue.ID);           // atk (bonus energy, draw)
-        //retVal.add(Ponder.ID);           // scry + draw
-        //retVal.add(Stun_Snipe.ID);       // atk + stun
         //retVal.add(Open_Fire.ID);        // atk
         //retVal.add(Outrage.ID);          // wraith stance (confused)
-        //retVal.add(Explosive_Shot.ID);   // atk + exhaust
         //retVal.add(Auto_Reloader.ID);    // atk buff
         //retVal.add(Endure_no_Pain.ID);   // def
         //retVal.add(Evade.ID);            // def
         //retVal.add(Unreal_Motion.ID);    // def
-        //retVal.add(Unrelenting_Fury.ID); // str
-        //retVal.add(Sanctuary.ID);        // dex
-        //retVal.add(Blue_Aura.ID);        // str + thorns
-        //retVal.add(Stat_Boost.ID);       // str + dex
         //retVal.add(Rock_Cannon_Mk2.ID);  // atk buff
-        //retVal.add(Rehabilitate.ID);     // card manipulation
         //retVal.add(Tactical_Manoeuvre.ID); // card manipulation
-        //retVal.add(Lethal_Blast.ID);     // x2/x3 poison
-        //retVal.add(Obnoxious_Skulls.ID); // skull
-        //retVal.add(Noxious_Horde.ID);    // focus + orb slot
-        //retVal.add(Keep_Firing.ID);      // atk
         //retVal.add(Attack_Trail.ID);     // block
 
-        // Rare
-        //retVal.add(Double_Team.ID);      // x2 cards played
         //retVal.add(Obliteration_Cannon.ID);// atk
-        //retVal.add(Over_Limit.ID);       // free atk
-        //retVal.add(BB_Genocide.ID);      // atk + bleed (AOE)
         //retVal.add(Vortex_Cannon.ID);    // atk
         //retVal.add(Perforate.ID);        // bleed
         //retVal.add(Menacing_Aura.ID);    // str loss + slow (AOE)
-        //retVal.add(Madness_Rain.ID);     // atk (AOE)
         //retVal.add(Star_Shot.ID);        // atk (bonus dmg)
         //retVal.add(Execute.ID);          // atk (perm dmg increase)
         //retVal.add(Rest.ID);             // heal
-        //retVal.add(Re_Ignition.ID);      // energy
         //retVal.add(Demonic_Power.ID);    // str
         //retVal.add(Necrotic_Power.ID);   // poison
         //retVal.add(Psychotic_Power.ID);  // insane
-        //retVal.add(Deadly_Decree.ID);    // skull buff
+
+        // change now ===========================================================
+        //retVal.add(Triple_Shot.ID);      // atk
+        //retVal.add(Discern.ID);          // vuln. + weak
+        //retVal.add(Annoying_Skull.ID);   // skull
+
+        //retVal.add(Ruined_Cube.ID);      // artifact
+        //retVal.add(Blazing_Trail.ID);    // draw
+        //retVal.add(Sanctuary.ID);        // dex
+        //retVal.add(Blue_Aura.ID);        // str + thorns
+        //retVal.add(Toxic_Strike.ID);     // atk + poison
+        //retVal.add(Lethal_Blast.ID);     // x2/x3 poison
+        //retVal.add(Obnoxious_Skulls.ID); // skull
+        //retVal.add(Noxious_Horde.ID);    // focus + orb slot
+
+        //retVal.add(Re_Ignition.ID);      // energy
 
         // TODO: Make card scale from cards played this combat
-        // TODO: Add a signature power for Black Rock Shooter
-        // TODO: Change leathal blast to something else
-        // TODO: Rework Re-Igition
+        // TODO: Change lethal blast to something else
+        // TODO: Rework Re-Ignition
         // TODO: change triple shot pic
         // TODO: make card that plays attack on top of deck
         // TODO: heat system that enters overheated stance after certain value (attacks you play gain heat).
-        // TODO: make overheated stance, reduce atk and def
         // TODO: make cards that remove heat as bonus effect.
+        // TODO: improve the end cutscene.
+        // TODO: focus on exhausting cards? make playable/unplayable cards that have extra effects when exhausted?
+        // TODO: IDEA -- make a card scales from dexterity.
+        // TODO: IDEA -- make a block skill that increases the block it gives everytime a card is played.
         // TODO: IDEA -- make an attack card that heals. Upgrade makes it have retain.
+        // TODO: IDEA -- make a card that gains block equal to amount enemy intends to attack.
         // TODO: IDEA -- make a card that exhausts hand, gain 1 strength for each card exhausted. replace demonic power?
-        // TODO: IDEA -- make a skill that buffs an enemy but you gain gold when you kill it (call it treasure hunt)
+        // TODO: IDEA -- make a power card that adds a copy of any card that gets exhausted.
+
+        // Test
+        retVal.add(Photon_Shower.ID);
+        retVal.add(Stat_Boost.ID);
+        retVal.add(Explosive_Shot.ID);
+        retVal.add(Treasure_Hunt.ID);
+        retVal.add(Evade.ID);
+
+
         return retVal;
     }
 
