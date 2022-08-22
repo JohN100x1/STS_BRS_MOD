@@ -1,11 +1,9 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.actions.Tactical_Manoeuvre_act;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,12 +13,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Rehabilitate extends AbstractDynamicCard {
+public class Rehabilitate extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Unplayable. When this card is Exhausted, gain [E][E] and draw 2(3) cards.
+     * Unplayable. When this card is Exhausted, gain [E][E]([E]) and draw 2(3) cards.
      */
 
 
@@ -28,6 +26,11 @@ public class Rehabilitate extends AbstractDynamicCard {
 
     public static final String ID = BlackRockShooterMod.makeID(Rehabilitate.class.getSimpleName());
     public static final String IMG = makeCardPath("Rehabilitate.png");
+
+    // /TEXT DECLARATION/
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
 
     // STAT DECLARATION
@@ -53,7 +56,7 @@ public class Rehabilitate extends AbstractDynamicCard {
 
     @Override
     public void triggerOnExhaust() {
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(2));
+        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(magicNumber));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(magicNumber));
     }
 
@@ -73,6 +76,7 @@ public class Rehabilitate extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_MAGIC);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

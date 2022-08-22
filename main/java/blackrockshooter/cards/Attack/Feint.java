@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Feint extends AbstractDynamicCard {
+public class Feint extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

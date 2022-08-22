@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Stun_Snipe extends AbstractDynamicCard {
+public class Stun_Snipe extends AbstractDefaultCard {
 
     // Deal 7 Damage. Apply 1 Stunned. Apply 20(15) Plated Armour. Exhaust.
 

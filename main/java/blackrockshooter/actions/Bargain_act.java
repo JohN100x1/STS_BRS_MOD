@@ -9,16 +9,14 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
-import java.util.Iterator;
-
 public class Bargain_act extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public Bargain_act(AbstractCreature source) {
         this.p = AbstractDungeon.player;
-        this.setValues((AbstractCreature)null, source, this.amount);
+        this.setValues(null, source, this.amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
     }
@@ -50,10 +48,8 @@ public class Bargain_act extends AbstractGameAction {
             }
 
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-                Iterator var3 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var3.hasNext()) {
-                    AbstractCard c = (AbstractCard)var3.next();
+                for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     if (c.cost > 0) {
                         c.freeToPlayOnce = true;
                     }

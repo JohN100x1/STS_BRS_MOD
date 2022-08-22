@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Photon_Shower extends AbstractDynamicCard {
+public class Photon_Shower extends AbstractDefaultCard {
 
     // Deal 4 Damage to ALL enemies 3(4) times. Exhaust.
 

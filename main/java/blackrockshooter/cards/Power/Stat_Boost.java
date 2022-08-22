@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Power;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Stat_Boost extends AbstractDynamicCard {
+public class Stat_Boost extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

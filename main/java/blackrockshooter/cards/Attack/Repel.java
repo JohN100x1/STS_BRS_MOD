@@ -1,18 +1,18 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
+import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import blackrockshooter.characters.BlackRockShooter;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Repel extends AbstractDynamicCard {
+public class Repel extends AbstractDefaultCard {
 
     // Deal 6 Damage to ALL enemies twice.
 

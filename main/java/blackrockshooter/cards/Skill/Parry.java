@@ -1,6 +1,8 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.BlackRockShooterMod;
+import blackrockshooter.cards.AbstractDefaultCard;
+import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -8,12 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BufferPower;
-import blackrockshooter.cards.AbstractDynamicCard;
-import blackrockshooter.characters.BlackRockShooter;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Parry extends AbstractDynamicCard {
+public class Parry extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

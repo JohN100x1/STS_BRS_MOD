@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import blackrockshooter.powers.Treasure_Hunt_pw;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Treasure_Hunt extends AbstractDynamicCard {
+public class Treasure_Hunt extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

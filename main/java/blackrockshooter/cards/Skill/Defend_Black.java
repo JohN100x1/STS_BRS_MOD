@@ -1,16 +1,16 @@
 package blackrockshooter.cards.Skill;
 
+import blackrockshooter.BlackRockShooterMod;
+import blackrockshooter.cards.AbstractDefaultCard;
+import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
-import blackrockshooter.characters.BlackRockShooter;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Defend_Black extends AbstractDynamicCard {
+public class Defend_Black extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

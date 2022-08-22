@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -17,7 +17,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 // Deal 13(17) damage. Exhaust 1 card. Add a Burn into your discard pile.
 
-public class Explosive_Shot extends AbstractDynamicCard {
+public class Explosive_Shot extends AbstractDefaultCard {
 
     public static final String ID = BlackRockShooterMod.makeID(Explosive_Shot.class.getSimpleName());
     public static final String IMG = makeCardPath("Explosive_Shot.png");

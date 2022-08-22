@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Skill;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import blackrockshooter.powers.Unrelenting_Fury_pw;
 import com.badlogic.gdx.graphics.Color;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Unrelenting_Fury extends AbstractDynamicCard {
+public class Unrelenting_Fury extends AbstractDefaultCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards

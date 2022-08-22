@@ -1,7 +1,7 @@
 package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,7 +14,7 @@ import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
 // Deal 6(9) damage.
 
-public class Strike_Black extends AbstractDynamicCard {
+public class Strike_Black extends AbstractDefaultCard {
 
     public static final String ID = BlackRockShooterMod.makeID(Strike_Black.class.getSimpleName());
     public static final String IMG = makeCardPath("Strike_Black.png");
@@ -46,7 +46,7 @@ public class Strike_Black extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
     }
 
 

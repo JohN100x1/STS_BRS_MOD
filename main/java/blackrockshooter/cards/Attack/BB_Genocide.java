@@ -2,7 +2,7 @@ package blackrockshooter.cards.Attack;
 
 import blackrockshooter.BlackRockShooterMod;
 import blackrockshooter.actions.BB_Genocide_act;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
 import blackrockshooter.characters.BlackRockShooter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class BB_Genocide extends AbstractDynamicCard {
+public class BB_Genocide extends AbstractDefaultCard {
 
     // Deal 7(9) Damage to ALL enemies 3 times. Any Bleed stacks become 10, otherwise Apply 3 Bleed. (End your Turn.)
 
