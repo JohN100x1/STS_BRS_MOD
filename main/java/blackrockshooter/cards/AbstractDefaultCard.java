@@ -1,5 +1,8 @@
 package blackrockshooter.cards;
+
 import basemod.abstracts.CustomCard;
+
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 
 public abstract class AbstractDefaultCard extends CustomCard {
 
@@ -17,16 +20,14 @@ public abstract class AbstractDefaultCard extends CustomCard {
     public boolean isCounterNumberModified; // A boolean to check whether the number has been modified or not, for coloring purposes. (red/green)
 
     public AbstractDefaultCard(final String id,
-                               final String name,
                                final String img,
                                final int cost,
-                               final String rawDescription,
                                final CardType type,
                                final CardColor color,
                                final CardRarity rarity,
                                final CardTarget target) {
 
-        super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        super(id, languagePack.getCardStrings(id).NAME, img, cost, languagePack.getCardStrings(id).DESCRIPTION, type, color, rarity, target);
 
         // Set all the things to their default values.
         isCostModified = false;
