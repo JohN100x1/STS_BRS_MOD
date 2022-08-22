@@ -1,18 +1,18 @@
 package blackrockshooter.cards.Temp;
 
 import blackrockshooter.BlackRockShooterMod;
-import blackrockshooter.cards.AbstractDynamicCard;
+import blackrockshooter.cards.AbstractDefaultCard;
+import blackrockshooter.powers.Rock_Cannon_Mk2_pw;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import blackrockshooter.powers.Rock_Cannon_Mk2_pw;
 
 import static blackrockshooter.BlackRockShooterMod.makeCardPath;
 
-public class Auto_Attack extends AbstractDynamicCard {
+public class Auto_Attack extends AbstractDefaultCard {
 
     // Deal 2(3) Damage 2 times. Exhaust.
 
@@ -29,7 +29,7 @@ public class Auto_Attack extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int AMOUNT = 2;
+    private static final int MAGIC = 2;
 
     // /STAT DECLARATION/
 
@@ -37,9 +37,9 @@ public class Auto_Attack extends AbstractDynamicCard {
     public Auto_Attack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(Rock_Cannon_Mk2_pw.POWER_ID)) {
-            baseMagicNumber = magicNumber = AMOUNT + AbstractDungeon.player.getPower(Rock_Cannon_Mk2_pw.POWER_ID).amount;
+            baseMagicNumber = magicNumber = MAGIC + AbstractDungeon.player.getPower(Rock_Cannon_Mk2_pw.POWER_ID).amount;
         } else {
-            baseMagicNumber = magicNumber = AMOUNT;
+            baseMagicNumber = magicNumber = MAGIC;
         }
         baseDamage = DAMAGE;
         exhaust = true;
@@ -49,7 +49,7 @@ public class Auto_Attack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p,damage,damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
     }
 
