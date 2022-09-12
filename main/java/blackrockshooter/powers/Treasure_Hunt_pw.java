@@ -32,7 +32,7 @@ public class Treasure_Hunt_pw extends AbstractPower implements CloneablePowerInt
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = owner.maxHealth / 2;
+        this.amount = -1;
         this.source = source;
 
         type = PowerType.DEBUFF;
@@ -44,11 +44,16 @@ public class Treasure_Hunt_pw extends AbstractPower implements CloneablePowerInt
         updateDescription();
     }
 
+    public int getHalfHealth() {
+        return owner.maxHealth / 2;
+    }
+
     @Override
     public void onDeath() {
-        AbstractDungeon.player.gainGold(amount);
+        int halfHealth = getHalfHealth();
+        AbstractDungeon.player.gainGold(halfHealth);
 
-        for (int i = 0; i < amount; ++i) {
+        for (int i = 0; i < halfHealth; ++i) {
             AbstractDungeon.effectList.add(new GainPennyEffect(source, this.owner.hb.cX, this.owner.hb.cY, this.source.hb.cX, this.source.hb.cY, true));
         }
     }
@@ -56,7 +61,7 @@ public class Treasure_Hunt_pw extends AbstractPower implements CloneablePowerInt
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + getHalfHealth() + DESCRIPTIONS[1];
     }
 
     @Override
